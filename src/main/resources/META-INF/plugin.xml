@@ -1,20 +1,39 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.example.demo</id>
+    <id>com.phongphan.keyhashlugin</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Demo</name>
+    <name>Facebook Key Hash Calculator</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@terralogic.com" url="https://www.yourcompany.com">Terralogic</vendor>
+    <vendor email="phongphan.dev@gmail.com" url="https://treeteam.github.io">The Tree Team</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius ex rutrum hendrerit porttitor. Donec congue massa eget enim gravida euismod. Sed rutrum scelerisque tempus. Sed finibus tortor eget magna hendrerit, in hendrerit elit commodo. Vestibulum maximus molestie eros ac.
+    
+ <h1>Facebook Key Hash Calculator</h1>
+
+  <p>This app helps you generate a key hash for your Android app, which is required by Facebook for authentication and other features. Simply input Sha1 fingerprint, and the app will generate the corresponding key hash for you.</p>
+
+  <h2>How to use</h2>
+
+  <ol>
+    <li>Enter your signature (SHA-1).</li>
+    <li>Click on the "Generate" button.</li>
+    <li>The key hash will be displayed in the popup dialog.</li>
+  </ol>
+
+  <h2>Why do I need a key hash?</h2>
+
+  <p>A key hash is a unique identifier for your Android app, which is used by Facebook to verify that any request made from your app is authentic. This is especially important for authentication and login features, as it ensures that only authorized users can access Facebook data.</p>
+
+  <p>To learn more about key hashes, visit the <a href="https://developers.facebook.com/docs/android/getting-started/#generate-release-key-hash">official Facebook documentation</a>.</p>
+
+
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
