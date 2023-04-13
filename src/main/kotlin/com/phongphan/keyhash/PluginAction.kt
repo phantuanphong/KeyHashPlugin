@@ -1,6 +1,5 @@
 package com.phongphan.keyhash
 
-import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.ui.Messages
@@ -52,7 +51,7 @@ class PluginAction: AnAction() {
                     "Key hash",
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.QUESTION_MESSAGE,
-                    null,
+                    icon,
                     arrayOf("Copy to clipboard", "Close"),
                     null
             )
@@ -73,7 +72,7 @@ class PluginAction: AnAction() {
     }
 
     //Override getActionUpdateThread() when you target 2022.3 or later!
-    override fun getActionUpdateThread(): ActionUpdateThread {
-        return super.getActionUpdateThread()
-    }
+//    override fun getActionUpdateThread(): ActionUpdateThread {
+//        return super.getActionUpdateThread()
+//    }
 }
