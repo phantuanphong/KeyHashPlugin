@@ -23,7 +23,7 @@ class PluginAction: AnAction() {
         val inputRegex = Regex("^[a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){19}$")
         val message = "Enter Sha1:"
         val defaultValue = ""
-        val input = Messages.showInputDialog(message, "Calculate key hash for Facebook", Messages.getQuestionIcon(), defaultValue, null)
+        val input = Messages.showInputDialog(message, "Facebook Key Hash Calculator", Messages.getQuestionIcon(), defaultValue, null)
 
         if (!input.isNullOrEmpty()  && inputRegex.matches(input)) {
 
@@ -38,9 +38,7 @@ class PluginAction: AnAction() {
             }
             val encodedString = Base64.getEncoder().encodeToString(bytes)
 
-            // User entered a valid input, display a confirmation dialog
             val confirmationMessage = String.format("$encodedString", input)
-            //Messages.showMessageDialog(confirmationMessage, "Key hash", Messages.getInformationIcon())
 
             val panel = JPanel(BorderLayout())
             val messageLabel = JLabel(confirmationMessage)
@@ -64,8 +62,10 @@ class PluginAction: AnAction() {
                 clipboard.setContents(selection, null)
             }
         }else {
-            // Invalid input, show an error message
-            Messages.showMessageDialog("Invalid input", "Error", Messages.getErrorIcon())
+            if(input != null){
+                // Invalid input, show an error message
+                Messages.showMessageDialog("Invalid input", "Error", Messages.getErrorIcon())
+            }
         }
 
     }
