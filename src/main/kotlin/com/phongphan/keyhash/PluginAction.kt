@@ -11,6 +11,7 @@ import java.util.*
 import javax.swing.JLabel
 import javax.swing.JOptionPane
 import javax.swing.JPanel
+import com.intellij.openapi.util.IconLoader
 
 class PluginAction: AnAction() {
 
@@ -23,7 +24,8 @@ class PluginAction: AnAction() {
         val inputRegex = Regex("^[a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){19}$")
         val message = "Enter Sha1:"
         val defaultValue = ""
-        val input = Messages.showInputDialog(message, "Facebook Key Hash Calculator", Messages.getQuestionIcon(), defaultValue, null)
+        val icon = IconLoader.getIcon("/icons/icon.svg")
+        val input = Messages.showInputDialog(null, message, "Facebook Key Hash Calculator", icon, defaultValue, null)
 
         if (!input.isNullOrEmpty()  && inputRegex.matches(input)) {
 
